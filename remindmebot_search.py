@@ -224,7 +224,7 @@ def main():
                 redditCall = Search(comment)
                 if ("RemindMe!" in comment.body and 
                     redditCall.comment.id not in redditCall.commented and
-                    'RemindMeBot' != str(comment.author)):
+                    USER != str(comment.author)):
                         print "in"
                         t = Thread(target=redditCall.run())
                         t.start()
